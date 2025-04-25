@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: orange;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: orange;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    display: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+}
+
+.hero {
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 5em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  text-align: left;
+}
+
+.hero-text {
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 8em;
+  margin: 0;
+  color: #fff;
+}
+
+.hero-text p {
+  font-size: 2em;
+  color: #fff;
+}
+
+.hero-text button {
+  margin-top: 1em;
+  padding: 1em 2.5em;
+  background: #aef;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.descripcion {
+  text-align: center;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5em;
+}
+
+.descripcion h2 {
+  font-size: 25px;
+}
+
+.descripcion p {
+  font-size: 20px;
+}
+
+.productos {
+  background: #d2f6f8;
+  padding: 2em;
+  text-align: center;
+}
+
+.productos h2 {
+  font-size: 25px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 1em;
+}
+
+.card {
+  background: transparent;
+  padding: 1em;
+  border-radius: 8px;
+  max-width: 200px;
+}
+
+.card p {
+  font-weight: bold;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card button {
+  background: orange;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+.carousel-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cards {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: max-content;
+  }
+
+  .card {
+    min-width: 80vw;
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+
+  .card img {
+    width: 50%;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    display: block;
+    z-index: 10;
+    padding: 0 0.5rem;
+    opacity: 0.7;
+  }
+
+  .carousel-btn.prev {
+    left: 0;
+  }
+
+  .carousel-btn.next {
+    right: 0;
+  }
+}
+
+.reglas {
+  background-image: url("bg-grid.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  padding: 5em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 20vh;
+  text-align: left;
+}
+
+.reglas img {
+  max-width: 40%;
+}
+
+@media (max-width: 768px) {
+  .reglas {
+    background-image: url("bg-grid.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    padding: 5em 2em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 20vh;
+    text-align: left;
+  }
+
+  .reglas img {
+    max-width: 60%;
+  }
+}
+
+.texto {
+  padding: 5em;
+  flex-wrap: wrap;
+}
+
+.texto h3 {
+  font-size: 25px;
+}
+
+.texto p {
+  font-size: 20px;
+}
+
+.footer {
+  background: #333;
+  color: white;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .links a {
+  color: white;
+  margin-left: 1em;
+  text-decoration: none;
+}
